@@ -8,6 +8,13 @@ const img =[
     
 ]
 
+let imgIndex = 0;
+let imgElement = document.getElementById('slider-img')
 setInterval(()=>{
-
+    imgIndex++;
+    if(imgIndex>=img.length){
+        imgIndex=0;
+    }
+    let imgUrl = img[imgIndex]
+    imgElement.setAttribute('src', imgUrl)
 },1000)
